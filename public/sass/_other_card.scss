@@ -1,0 +1,41 @@
+.other-card {
+    display: flex;
+    gap: 32px;
+    background: #333;
+    color: #fff;
+    padding: 16px;
+    align-items: center;
+    .image {
+        width: 50px;
+        height: 50px;
+        background-color: #ccc;
+        border-radius: 4px;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .price {
+        background-color: #222;
+        display: flex;
+        align-items: center;
+        border-radius: 4px;
+        overflow: hidden;
+        & > * {
+            line-height: 1;
+            padding:  8px;
+        }
+        .down {
+            background-color: #444;
+        }
+    }
+
+    .logo {
+        background-image: url(/images/logos.png);
+        background-position: -10px -51px;
+        width: 97px;
+        height: 30px;
+        margin-left: auto;
+    }
+}
