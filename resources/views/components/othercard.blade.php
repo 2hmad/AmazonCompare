@@ -9,5 +9,5 @@
     </div>
     <div class="logo">
     </div>
-    <button>Buy now</button>
+    <button>{{ __('home.buy-now') }}</button>
 </div>

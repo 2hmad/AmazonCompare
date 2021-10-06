@@ -7,9 +7,9 @@
             <img src="/icons/search.svg" />
         </div>
       </div>
-      <div class="lang">lang</div>
+      <div class="lang">{{ __('header.change-lang') }}</div>
       <div class="links">
-        <a href="/login">Sign in</a>
+        <a href="/login">{{ __('header.login') }}</a>
         <a href="">Orders</a>
       </div>
       <div class="cart"><img src="/icons/cart.svg" /></div>

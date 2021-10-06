@@ -1,7 +1,7 @@
 <div class="single-item-grid">
     <div class="header">
-      <div class="title">Today's deals</div>
-      <a href="/">See more</a>
+      <div class="title">{{ __('home.today-deal') }}</div>
+      <a href="/">{{ __('home.see-more') }}</a>
     </div>
 
     <div class="slider">
