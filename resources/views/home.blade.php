@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html @if(LaravelLocalization::getCurrentLocale() == "ar") dir="rtl" @endif lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         @include('layout/head')
         <title>Camazon</title>

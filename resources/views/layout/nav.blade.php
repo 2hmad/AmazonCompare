@@ -1,12 +1,12 @@
 <nav>
     <div class="container">
       <div class="links">
-        <a href="/">Today's deals</a>
-        <a href="/">Fashion</a>
-        <a href="/">Electronics</a>
-        <a href="/">Grocery</a>
-        <a href="/">Perfumes</a>
-        <a href="/">Clothes</a>
+        <a href="/">{{ __("navbar.today-deal") }}</a>
+        <a href="/">{{ __('navbar.fashion') }}</a>
+        <a href="/">{{ __('navbar.electronics') }}</a>
+        <a href="/">{{__('navbar.grocery')}}</a>
+        <a href="/">{{ __('navbar.perfumes') }}</a>
+        <a href="/">{{ __('navbar.clothes') }}</a>
       </div>
     </div>
   </nav>
