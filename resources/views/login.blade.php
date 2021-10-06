@@ -8,7 +8,7 @@
         @include('layout/header')
         <div class="page">
             <div class="container">
-               <div class="login-page">
+               <div class="auth-page">
                    <form action="">
                        <h1>Sign in</h1>
                        <input type="text" name="username" placeholder="Username">
@@ -20,5 +20,6 @@
                </div>
             </div>
         </div>
+        @include('layout/footer')
     </body>
 </html>

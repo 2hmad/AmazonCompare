@@ -1,0 +1,26 @@
+nav {
+    background-color: rgb(35, 47, 63);
+    .container {
+        height: 56px;
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        color: #fff;
+    }
+    .menu {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        width: 24px;
+        cursor: pointer;
+        span {
+            height: 2px;
+            background-color: #fff;
+        }
+    }
+    .links {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+    }
+}

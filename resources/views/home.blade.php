@@ -11,7 +11,7 @@
             <div class="container">
                 <div class="home-page">
 
-                    @include('components/slidercard')
+                    @include('components/slider')
                     <div class="multi-item-grid">
                         <div class="item">
                         @include('components/homecard')
@@ -26,5 +26,6 @@
             </div>
             </div>
         </div>
+        @include('layout/footer')
     </body>
 </html>
