@@ -11,17 +11,13 @@
             <div class="container">
                 <div class="home-page">
 
-                    @include('components/slider')
                     <div class="multi-item-grid">
-                        <div class="item">
                         @include('components/homecard')
-                    </div>
-                    <div class="item">
                         @include('components/homecard')
-                    </div>
-                    <div class="item">
                         @include('components/homecard')
-                    </div>
+                        @include('components/homecard')
+                        @include('components/homecard')
+                        @include('components/homecard')
                 </div>
             </div>
             </div>

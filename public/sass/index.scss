@@ -8,9 +8,12 @@
 @import 'components/slider';
 @import 'components/product';
 @import 'components/other_card';
+@import 'components/review';
+@import 'components/cart';
 
 @import 'pages/home';
 @import 'pages/auth';
+@import 'pages/profile';
 
 
 .single-item-grid {
@@ -36,6 +39,6 @@
 
 .multi-item-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 32px;
 }

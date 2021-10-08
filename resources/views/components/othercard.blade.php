@@ -8,6 +8,7 @@
         <div class="down">-2%</div>
     </div>
     <div class="logo">
+        <img src="/images/eg.webp" alt="EG">
     </div>
     <button>{{ __('home.buy-now') }}</button>
 </div>
