@@ -13,7 +13,11 @@
             <div class="profile-page">
                 <form action="">
                     <div class="profile-image">
-                        <img src="/images/2.jpg" alt="Yousef">
+                        @if ($profile->pic == '')
+                            <img src="/images/profile-placeholder.png" alt="User">
+                        @else
+                            <img src="{{ $profile->pic }}" alt="{{ $profile->name }} picture">
+                        @endif
                     </div>
                     <input type="text" name="username" placeholder="Username" value="{{ $profile->name }}">
                     <input type="text" name="phone" placeholder="Phone" value="{{ $profile->phone }}">
@@ -23,10 +27,9 @@
                 </form>
                 <hr style="width: 100%;margin-top: 5%;margin-bottom: 3%;border: 1px solid #e1e1e1;" />
                 <div style="width: 100%">
-                    <h2 style="font-size: 16px;margin-bottom: 1%;">Change Password</h2>
                     <form method="POST" action="">
-                        <input type="password" name="password" placeholder="Password" value="">
-                        <input type="password" name="password" placeholder="Confirm password" value="">
+                        <input type="password" name="password" placeholder="New Password">
+                        <input type="password" name="password" placeholder="Confirm new password">
                         <button type="submit">Change password</button>
                     </form>
                 </div>

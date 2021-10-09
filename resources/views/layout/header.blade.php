@@ -28,6 +28,9 @@
                     <img src="/images/2.jpg" alt="Yousef">
                 </div>
             </a>
+            <a href="/logout" style="margin-right: 1%">
+                <img src="/icons/logout_white.svg">
+            </a>
         @else
             <div class="links">
                 <a href="/login">Sign in</a>
