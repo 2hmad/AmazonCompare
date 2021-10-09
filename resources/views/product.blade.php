@@ -9,7 +9,7 @@
 <body>
     @include('layout/header')
     @include('layout/nav')
-    <div class="page">
+    <div class="page" style="background: white">
         <div class="container">
             <div class="product-page">
                 <div class="product">
@@ -28,7 +28,7 @@
                                 <span><img src="/images/eg.webp" /></span>
                             </h1>
 
-                            <button>Add to cart</button>
+                            <button>Add to favourite</button>
                         </div>
                         <div class="stars">
                             <img src="/icons/star.svg" />
@@ -42,6 +42,26 @@
                             <div>{{ $request['price'] }}</div>
                             <span>EGP</span>
                         </div>
+                        <div class="prices">
+                            <div class="l-price">
+                                <div>Lowest price</div>
+                                <span
+                                    style="display: flex;align-items: center;justify-content: center;flex-wrap: nowrap;">
+                                    <img src="/icons/trending_up.svg" style="max-width: 30px">535.00
+                                </span>
+                            </div>
+                            <div class="h-price">
+                                <div>Highest price</div>
+                                <span
+                                    style="display: flex;align-items: center;justify-content: center;flex-wrap: nowrap;">
+                                    <img src="/icons/trending_down.svg" style="max-width: 30px">1500
+                                </span>
+                            </div>
+                            <div class="r-price">
+                                <div>Latest down</div>
+                                -12.8%
+                            </div>
+                        </div>
 
                         <div class="p-details">
                             <h3>Details</h3>
@@ -54,25 +74,26 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="prices">
-                        <div class="l-price">
-                            <div>Lowest price</div>
-                            <span style="display: flex;align-items: center;justify-content: center;flex-wrap: nowrap;">
-                                <img src="/icons/trending_up.svg" style="max-width: 30px">535.00
-                            </span>
+                    <div class="right-side">
+                        <div class="advertise">
+                            <img src="https://via.placeholder.com/250">
                         </div>
-                        <div class="h-price">
-                            <div>Highest price</div>
-                            <span style="display: flex;align-items: center;justify-content: center;flex-wrap: nowrap;">
-                                <img src="/icons/trending_down.svg" style="max-width: 30px">1500
-                            </span>
-                        </div>
-                        <div class="r-price">
-                            <div>Latest down</div>
-                            -12.8%
+                        <div class="watch">
+                            <h4>Amazon price watches</h4>
+                            <form method="POST" style="display: flex;flex-direction: column;gap: 9px;">
+                                @include('components/currencies')
+                                <div style="display: flex;align-items: center;gap: 10px;">
+                                    <input type="checkbox" name="send-email"> <label>Send an email</label>
+                                </div>
+                                <input type="email" name="send-email" placeholder="Send an email">
+                                <div style="display: flex;align-items: center;gap: 10px;">
+                                    <input type="checkbox" name="send-phone"> <label>Send an message</label>
+                                </div>
+                                <input type="phone" name="send-phone" placeholder="Send an message">
+                                <input type="submit" name="watch-price" value="Subscribe">
+                            </form>
                         </div>
                     </div>
-
                 </div>
                 <div class="product-desc">
                     <h1>Product details</h1>

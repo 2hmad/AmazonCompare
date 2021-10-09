@@ -26,7 +26,6 @@
         aspect-ratio: 1/1;
         min-width: 320px;
         min-height: 320px;
-        background-color: #ccc;
         flex-grow: 1;
         overflow: hidden;
         img {
@@ -85,7 +84,7 @@
         display: flex;
         background-color: #ddd;
         gap: 1px;
-        flex-direction: column;
+        flex-direction: row;
         flex-grow: 1;
         border: 1px solid #ddd;
         flex-wrap: wrap;
@@ -233,13 +232,15 @@
             }
         }
     }
-    .stars {
-        & > * {
-            cursor: pointer;
-        }
-    }
 }
 // -10px -51px
+.stars {
+    & > * {
+        cursor: pointer;
+    }
+    display: flex;
+    align-items: center;
+}
 
 .progress-bar {
     height: 32px;
@@ -250,5 +251,26 @@
     .inner {
         height: 100%;
         background-color: #febd69;
+    }
+}
+.right-side {
+    form {
+        input[type="email"],
+        input[type="phone"],
+        select {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            height: auto;
+            width: 100%;
+            outline: none;
+        }
+        input[type="submit"] {
+            padding: 10px;
+            background: #febd69;
+            font-weight: bold;
+            border: none;
+            border-radius: 3px;
+        }
     }
 }
