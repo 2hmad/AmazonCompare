@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -23,17 +24,12 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
     Route::post('/login', [LoginController::class, 'check'])->name('login-account');
     Route::get('/register', [RegisterController::class, 'index']);
     Route::post('/register', [RegisterController::class, 'register'])->name('register-acc');
-
+    Route::get('/logout', [LoginController::class, 'logout']);
+    Route::get('/profile', [ProfileController::class, 'index']);
     Route::get('/product', function () {
         return view('product');
     });
-
-
     Route::get('/cart', function () {
         return view('cart');
-    });
-
-    Route::get('/profile', function () {
-        return view('profile');
     });
 });

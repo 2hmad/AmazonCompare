@@ -35,6 +35,17 @@
             color: red;
             gap: 10px;
             align-items: center;
+            width: 85px;
+            font-weight: bold;
+        }
+        .up {
+            display: flex;
+            background-color: #ccc;
+            color: green;
+            gap: 10px;
+            align-items: center;
+            width: 85px;
+            font-weight: bold;
         }
         margin-right: auto;
     }

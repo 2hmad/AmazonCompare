@@ -21,20 +21,19 @@
                     </div>
                     <button type="submit" style="margin-top: 5%">Login</button>
                     @error('email')
-                        <div class="error-message"><img src="/icons/error_white.svg"> {{ $message }}</div>
+                        <div class="error-message">{{ $message }}</div>
                     @enderror
                     @error('password')
-                        <div class="error-message"><img src="/icons/error_white.svg"> {{ $message }}</div>
+                        <div class="error-message">{{ $message }}</div>
                     @enderror
                     @if (Session::has('fail-email'))
-                        <div class="error-message"><img src="/icons/error_white.svg">
+                        <div class="error-message">
                             {{ Session::get('fail-email') }}</div>
                     @endif
                     @if (Session::has('fail-password'))
-                        <div class="error-message"><img src="/icons/error_white.svg">
+                        <div class="error-message">
                             {{ Session::get('fail-password') }}</div>
                     @endif
-
                     <a href="#" class="social-button" id="facebook-connect"> <span>Connect with Facebook</span></a>
                     <a href="#" class="social-button" id="google-connect"> <span>Connect with Google</span></a>
                 </form>

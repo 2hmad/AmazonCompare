@@ -629,6 +629,7 @@ nav .links {
 }
 
 .product-desc {
+  line-height: 2em;
   padding: 32px;
   background-color: #fff;
   border: 1px solid #ccc;
@@ -852,6 +853,22 @@ nav .links {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 85px;
+  font-weight: bold;
+}
+
+.other-card .price .up {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #ccc;
+  color: green;
+  gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 85px;
+  font-weight: bold;
 }
 
 .other-card .logo {
@@ -1230,5 +1247,36 @@ nav .links {
       -ms-flex-align: center;
           align-items: center;
   gap: 10px;
+}
+
+.error-message::before {
+  content: url("../icons/error_white.svg");
+  position: relative;
+  left: 0px;
+  top: 2px;
+}
+
+.success-message {
+  background-color: green;
+  padding: 10px;
+  color: white;
+  border-radius: 3px;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.success-message::before {
+  content: url("../icons/check_white.svg");
+  position: relative;
+  left: 0px;
+  top: 2px;
 }
 /*# sourceMappingURL=index.css.map */

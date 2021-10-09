@@ -22,14 +22,17 @@
                 </a>
             </div>
         </div>
-        <a href="/profile" class="profile">
-            <div class="profile-image">
-                <img src="/images/2.jpg" alt="Yousef">
+        @if (Session::has('email'))
+            <a href="/profile" class="profile">
+                <div class="profile-image">
+                    <img src="/images/2.jpg" alt="Yousef">
+                </div>
+            </a>
+        @else
+            <div class="links">
+                <a href="/login">Sign in</a>
             </div>
-        </a>
-        {{-- <div class="links">
-        <a href="/login">Sign in</a>
-      </div> --}}
+        @endif
         <a href="/cart" class="cart"><img src="/icons/cart.svg" /></a>
     </div>
     <div class="search-responsive-con">

@@ -7,12 +7,17 @@ use App\Models\Users;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Session;
 
 class LoginController extends Controller
 {
     public function index()
     {
-        return view('login');
+        if (Session::has('email')) {
+            return redirect()->to('profile');
+        } else {
+            return view('login');
+        }
     }
     public function check(LoginRequest $request)
     {
@@ -23,12 +28,17 @@ class LoginController extends Controller
         if ($user) {
             if (Hash::check($request->password, $user->password)) {
                 $request->session()->put('email', $user->email);
-                return redirect()->to('home')->withSuccess('Logged-in');
+                return redirect()->to('/');
             } else {
                 return redirect('login')->with('fail-password', "password incorrect");
             }
         } else {
             return redirect('login')->with('fail-email', "email not found");
         }
+    }
+    public function logout()
+    {
+        Session::forget('email');
+        return redirect()->to('/');
     }
 }

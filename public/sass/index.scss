@@ -51,3 +51,27 @@
     align-items: center;
     gap: 10px;
 }
+.error-message::before {
+    content: url("../icons/error_white.svg");
+    position: relative;
+    left: 0px;
+    top: 2px;
+}
+.success-message {
+    background-color: green;
+    padding: 10px;
+    color: white;
+    border-radius: 3px;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.success-message::before {
+    content: url("../icons/check_white.svg");
+    position: relative;
+    left: 0px;
+    top: 2px;
+}
