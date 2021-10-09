@@ -31,7 +31,6 @@
         overflow: hidden;
         img {
             width: 100%;
-            height: 100%;
         }
     }
 
@@ -106,7 +105,8 @@
                 font-size: 14px;
             }
         }
-        .l-price, .r-price {
+        .l-price,
+        .r-price {
             color: rgb(73, 240, 95);
             font-size: 24px;
         }
@@ -145,7 +145,7 @@
         margin-left: 16px;
     }
 }
-.reviews-container{
+.reviews-container {
     margin-top: 32px;
     display: flex;
     gap: 32px;
@@ -179,7 +179,6 @@
     }
 }
 .reviews-content {
-
     flex-grow: 6;
 }
 .reviews {
@@ -189,7 +188,7 @@
     max-height: 550px;
     overflow-y: auto;
     background-color: #ddd;
-    a{
+    a {
         background-color: #fff;
         padding: 16px;
         text-align: center;
@@ -212,7 +211,7 @@
     }
     .input-wrapper {
         flex-grow: 1;
-        
+
         & > textarea {
             background-color: #fff;
             min-height: 40px;
@@ -235,8 +234,6 @@
             cursor: pointer;
         }
     }
-
-    
 }
 // -10px -51px
 

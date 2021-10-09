@@ -12,7 +12,8 @@ body {
   background-color: #e9edee;
 }
 
-input, textarea {
+input,
+textarea {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -44,7 +45,9 @@ button.second {
   color: #222;
 }
 
-input {
+input[type="email"],
+input[type="password"],
+input[type="text"] {
   height: 40px;
   outline: none;
   padding: 0 12px;
@@ -53,7 +56,9 @@ input {
   width: 100%;
 }
 
-input:focus {
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="text"]:focus {
   border-color: #febd69;
 }
 
@@ -141,7 +146,7 @@ header .search .icon {
   font-size: 0;
   width: 50px;
   height: 40px;
-  background-color: #febd69;
+  background-color: #ffa530;
 }
 
 @media (max-width: 567px) {
@@ -151,17 +156,26 @@ header .search .icon {
 }
 
 header .lang {
-  width: 32px;
-  height: 24px;
   background-color: #febd6920;
   border-radius: 4px;
-  color: #febd69;
+  color: #ffa530;
   position: relative;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   cursor: pointer;
+  width: 90px;
+  height: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header .lang .current-lang {
@@ -202,7 +216,7 @@ header .lang .lang-dropdown .lang-choice {
 }
 
 header .lang .lang-dropdown .lang-choice:hover {
-  background-color: #febd69;
+  background-color: #ffa530;
   color: #fff;
 }
 
@@ -292,7 +306,7 @@ nav .links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 12px;
+  gap: 35px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -461,7 +475,6 @@ nav .links {
 
 .product .image img {
   width: 100%;
-  height: 100%;
 }
 
 .product .details {
@@ -582,7 +595,8 @@ nav .links {
   font-size: 14px;
 }
 
-.product .prices .l-price, .product .prices .r-price {
+.product .prices .l-price,
+.product .prices .r-price {
   color: #49f05f;
   font-size: 24px;
 }
@@ -798,7 +812,6 @@ nav .links {
 .other-card .image {
   width: 50px;
   height: 50px;
-  background-color: #ccc;
   border-radius: 4px;
 }
 
@@ -825,13 +838,25 @@ nav .links {
   padding: 8px;
 }
 
+.other-card .price img {
+  max-width: 20px;
+}
+
 .other-card .price .down {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   background-color: #ccc;
+  color: red;
+  gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .other-card .logo {
   width: 32px;
-  height: 24  px;
+  height: 24 px;
 }
 
 .other-card .logo img {
@@ -1004,6 +1029,100 @@ nav .links {
   margin-bottom: 16px;
 }
 
+.social-button {
+  background-position: 25px 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  height: 40px;
+  line-height: 50px;
+  text-align: left;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+  width: 100%;
+  border-radius: 3px;
+  margin: 0 auto;
+  outline: white none 0px;
+  padding-left: 20%;
+  -webkit-transition: all 0.2s cubic-bezier(0.72, 0.01, 0.56, 1) 0s;
+  transition: all 0.2s cubic-bezier(0.72, 0.01, 0.56, 1) 0s;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#facebook-connect {
+  background: white url("https://raw.githubusercontent.com/eswarasai/social-login/master/img/facebook.svg?sanitize=true") no-repeat scroll 5px 0px/30px 40px padding-box border-box;
+  border: 1px solid #3c5a9a;
+}
+
+#facebook-connect:hover {
+  border-color: #3c5a9a;
+  background: #3c5a9a url("https://raw.githubusercontent.com/eswarasai/social-login/master/img/facebook-white.svg?sanitize=true") no-repeat scroll 5px 0px/30px 40px padding-box border-box;
+  -webkit-transition: all 0.8s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+#facebook-connect span {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #3c5a9a;
+  cursor: pointer;
+  text-align: center;
+  text-transform: uppercase;
+  border: 0px none white;
+  outline: white none 0px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#facebook-connect:hover span {
+  color: #fff;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#google-connect {
+  background: white url("https://raw.githubusercontent.com/eswarasai/social-login/master/img/google-plus.png") no-repeat scroll 5px -5px/50px 50px padding-box border-box;
+  border: 1px solid #dc4a3d;
+}
+
+#google-connect:hover {
+  border-color: #dc4a3d;
+  background: #dc4a3d url("https://raw.githubusercontent.com/eswarasai/social-login/master/img/google-plus-white.png") no-repeat scroll 5px -5px/50px 50px padding-box border-box;
+  -webkit-transition: all 0.8s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+#google-connect span {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #dc4a3d;
+  cursor: pointer;
+  text-align: center;
+  text-transform: uppercase;
+  border: 0px none #dc4a3d;
+  outline: white none 0px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#google-connect:hover span {
+  color: #fff;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
 .profile-page {
   max-width: 500px;
   background-color: #fff;
@@ -1093,6 +1212,23 @@ nav .links {
   display: grid;
   -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 32px;
+  gap: 100px;
+}
+
+.error-message {
+  background-color: #ff4343;
+  padding: 10px;
+  color: white;
+  border-radius: 3px;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
 }
 /*# sourceMappingURL=index.css.map */

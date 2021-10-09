@@ -10,7 +10,8 @@ body {
     font-size: 16px;
     background-color: rgb(233, 237, 238);
 }
-input, textarea{
+input,
+textarea {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -35,7 +36,9 @@ button {
     }
 }
 
-input {
+input[type="email"],
+input[type="password"],
+input[type="text"] {
     height: 40px;
     outline: none;
     padding: 0 12px;
