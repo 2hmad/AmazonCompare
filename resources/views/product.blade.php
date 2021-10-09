@@ -14,17 +14,19 @@
             <div class="product-page">
                 <div class="product">
                     <div class="image-selector">
-                        <img src="/images/2.jpg" alt="A1">
+                        <img src="{{ $request['image'] }}" alt="A1">
                         <img src="/images/1.jpg" alt="A1">
                         <img src="/images/3.jpg" alt="A1">
                     </div>
                     <div class="image">
-                        <img src="/images/2.jpg" alt="A1">
+                        <img src="{{ $request['image'] }}" alt="A1">
                     </div>
                     <div class="details">
                         <div class="top-details">
 
-                            <h1 class="title">Face mask 350ml <span><img src="/images/eg.webp" /></span></h1>
+                            <h1 class="title">{{ $request['title'] }}
+                                <span><img src="/images/eg.webp" /></span>
+                            </h1>
 
                             <button>Add to cart</button>
                         </div>
@@ -34,9 +36,10 @@
                             <img src="/icons/star.svg" />
                             <img src="/icons/star.svg" />
                             <img src="/icons/star_half.svg" />
+                            <span>{{ $request['rating']['rate'] }}</span>
                         </div>
                         <div class="price">
-                            <div>650.00</div>
+                            <div>{{ $request['price'] }}</div>
                             <span>EGP</span>
                         </div>
 
@@ -173,7 +176,6 @@
                         </form>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>

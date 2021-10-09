@@ -7,6 +7,7 @@
 </head>
 
 <body>
+
     @include('layout/header')
     @include('layout/nav')
     <div class="page">
