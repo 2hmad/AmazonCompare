@@ -64,7 +64,7 @@
                         </div>
 
                         <div class="p-details">
-                            <h3>Details</h3>
+                            <h3>About this item</h3>
                             <ul>
                                 <li>Color: Black</li>
                                 <li>Awesome Shoe</li>
@@ -73,6 +73,7 @@
                                 <li>Great</li>
                             </ul>
                         </div>
+
                     </div>
                     <div class="right-side">
                         <div class="advertise">
@@ -109,18 +110,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="product-desc">
-                    <h1>Product details</h1>
-                    <ul>
-                        <li><b>Date First Available</b> ‏ : ‎ 1 August 2021</li>
-                        <li><b>ASIN</b> ‏ : ‎B09BM4S4LJ</li>
-                    </ul>
-                </div>
                 <div class="other">
                     @include('components/othercard')
                     @include('components/othercard')
                     @include('components/othercard')
                     @include('components/othercard')
+                </div>
+                <div class="chart-container" style="position: relative; height:40vh; width:80vw">
+                    <canvas id="myChart" width="400" height="400"></canvas>
                 </div>
                 <div class="reviews-container">
                     <div class="stats">
@@ -179,19 +176,10 @@
                                 <div>0%</div>
                             </div>
                         </div>
-                    </div>
-                    <div class="reviews-content">
 
-                        <div class="reviews">
-                            @include('components/review')
-                            @include('components/review')
-                            @include('components/review')
-                            @include('components/review')
-                            @include('components/review')
-                            @include('components/review')
-                            <a href="/">See more</a>
-                        </div>
                         <form class="review-input">
+                            <h2>Review this product</h2>
+
                             <div class="stars">
                                 <img src="/icons/star_outline.svg" />
                                 <img src="/icons/star_outline.svg" />
@@ -209,6 +197,19 @@
                             </div>
 
                         </form>
+
+                    </div>
+                    <div class="reviews-content">
+
+                        <div class="reviews">
+                            @include('components/review')
+                            @include('components/review')
+                            @include('components/review')
+                            @include('components/review')
+                            @include('components/review')
+                            @include('components/review')
+                            <a href="/">See more</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -217,5 +218,34 @@
     @include('layout/footer')
     <script src="/js/product.js"></script>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"
+integrity="sha512-Wt1bJGtlnMtGP0dqNFH1xlkLBNpEodaiQ8ZN5JLA5wpc1sUlk/O5uuOMNgvzddzkpvZ9GLyYNa8w2s7rqiTk5Q=="
+crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    var ctx = document.getElementById("myChart").getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ["Tokyo", "Mumbai", "Mexico City", "Shanghai", "Sao Paulo", "New York", "Karachi",
+                "Buenos Aires", "Delhi", "Moscow"
+            ],
+            datasets: [{
+                label: 'Series 1',
+                data: [500, 50, 2424, 14040, 14141, 4111, 4544, 47, 5555, 6811, 500, 50, 2424, 14040,
+                    14141, 4111, 4544, 47, 5555, 6811, 500, 50, 2424, 14040, 14141, 4111, 4544, 47,
+                    5555, 6811, 500, 50, 2424, 14040, 14141, 4111, 4544, 47, 5555, 6811
+                ],
+                fill: false,
+                borderColor: '#2196f3',
+                backgroundColor: '#2196f3',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+        }
+    });
+</script>
 
 </html>

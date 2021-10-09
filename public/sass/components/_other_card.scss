@@ -29,15 +29,6 @@
         img {
             max-width: 20px;
         }
-        .down {
-            display: flex;
-            background-color: #ccc;
-            color: red;
-            gap: 10px;
-            align-items: center;
-            width: 85px;
-            font-weight: bold;
-        }
         .up {
             display: flex;
             background-color: #ccc;
@@ -48,6 +39,14 @@
             font-weight: bold;
         }
         margin-right: auto;
+    }
+    .down {
+        display: flex;
+        color: red;
+        gap: 10px;
+        font-weight: bold;
+        justify-content: flex-end;
+        align-items: center;
     }
 
     .logo {
