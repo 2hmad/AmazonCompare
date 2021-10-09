@@ -3,7 +3,7 @@
 
 <head>
     @include('layout/head')
-    <title>Camazon - Login</title>
+    <title>GoAmaz - Login</title>
 </head>
 
 <body>
@@ -37,8 +37,8 @@
                     <a href="#" class="social-button" id="facebook-connect"> <span>Connect with Facebook</span></a>
                     <a href="#" class="social-button" id="google-connect"> <span>Connect with Google</span></a>
                 </form>
-                <div class="new">New to Camazon?</div>
-                <a href="/register"><button class="second">Create Camazon account</button></a>
+                <div class="new">New to GoAmaz?</div>
+                <a href="/register"><button class="second">Create GoAmaz account</button></a>
             </div>
         </div>
     </div>

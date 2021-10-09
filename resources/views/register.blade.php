@@ -3,7 +3,7 @@
 
 <head>
     @include('layout/head')
-    <title>Camazon - Login</title>
+    <title>GoAmaz - Login</title>
 </head>
 
 <body>

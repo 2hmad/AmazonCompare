@@ -1,6 +1,6 @@
 <header>
     <div class="container">
-        <div class="logo"><a href="/">Camazon</a></div>
+        <div class="logo"><a href="/">GoAmaz</a></div>
         @if (request()->route()->uri == 'ar/login' || (request()->route()->uri == 'en/login' || request()->route()->uri == 'ar/register') || request()->route()->uri == 'en/register')
 
         @else
