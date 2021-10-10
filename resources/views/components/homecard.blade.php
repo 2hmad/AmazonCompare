@@ -12,7 +12,7 @@
             <img src="/icons/star_half.svg" />
         </div>
         <div class="price">
-            <div class="currency">EGP</div>
+            <div class="currency">USD</div>
             <div class="amount">{{ $item['price'] }}</div>
             <div class="complment">00</div>
         </div>

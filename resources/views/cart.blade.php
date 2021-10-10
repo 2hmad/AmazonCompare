@@ -20,7 +20,7 @@
                         </div>
                         <div class="cart-item-info">
                             <div class="name">Face mask 350ml</div>
-                            <div class="price">350 EGP</div>
+                            <div class="price">350 USD</div>
                             <div class="stars">
                                 <img src="/icons/star.svg" />
                                 <img src="/icons/star.svg" />
@@ -38,7 +38,7 @@
                         </div>
                         <div class="cart-item-info">
                             <div class="name">Face mask 350ml</div>
-                            <div class="price">350 EGP</div>
+                            <div class="price">350 USD</div>
                             <div class="stars">
                                 <img src="/icons/star.svg" />
                                 <img src="/icons/star.svg" />
@@ -56,7 +56,7 @@
                         </div>
                         <div class="cart-item-info">
                             <div class="name">Face mask 350ml</div>
-                            <div class="price">350 EGP</div>
+                            <div class="price">350 USD</div>
                             <div class="stars">
                                 <img src="/icons/star.svg" />
                                 <img src="/icons/star.svg" />

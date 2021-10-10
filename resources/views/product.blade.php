@@ -40,7 +40,7 @@
                         </div>
                         <div class="price">
                             <div>{{ $request['price'] }}</div>
-                            <span>EGP</span>
+                            <span>USD</span>
                         </div>
                         <div class="prices">
                             <div class="l-price">

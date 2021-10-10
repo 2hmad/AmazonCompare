@@ -47,7 +47,7 @@
     <option value="DJF">DJF - Djiboutian Franc</option>
     <option value="DOP">DOP - Dominican Peso</option>
     <option value="XCD">XCD - East Caribbean Dollar</option>
-    <option value="EGP">EGP - Egyptian Pound</option>
+    <option value="USD">USD - Egyptian Pound</option>
     <option value="ERN">ERN - Eritrean Nakfa</option>
     <option value="EEK">EEK - Estonian Kroon</option>
     <option value="ETB">ETB - Ethiopian Birr</option>
