@@ -6,7 +6,7 @@
         <img src="/images/eg.webp" alt="EG">
     </div>
     <div class="price">
-        <div class="amount">456 USD</div>
+        <div class="amount" style="color: green;font-weight:bold">456 EGP</div>
     </div>
     <div class="down"><img src="/icons/trending_down.svg"> 2%</div>
 

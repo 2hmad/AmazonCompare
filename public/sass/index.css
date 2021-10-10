@@ -625,7 +625,6 @@ nav .links {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 2px;
-  background-color: #ccc;
   margin-top: 32px;
 }
 
@@ -829,7 +828,7 @@ nav .links {
   display: -ms-flexbox;
   display: flex;
   gap: 16px;
-  background: #fcfcfc;
+  background: transparent;
   color: #111;
   padding: 16px;
   -webkit-box-align: center;
@@ -837,6 +836,7 @@ nav .links {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .other-card .image {
@@ -851,7 +851,6 @@ nav .links {
 }
 
 .other-card .price {
-  background-color: #ddd;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
