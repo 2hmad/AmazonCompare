@@ -14,8 +14,8 @@
         <div class="container">
             <div class="home-page">
                 <div class="multi-item-grid">
-                    @include('components/homecard')
-                    @include('components/homecard2')
+                    {{-- @include('components/homecard') --}}
+                    {{-- @include('components/homecard2') --}}
                 </div>
                 <div class="homeblocks">
                   @include('components/homeblock')
@@ -35,6 +35,22 @@
                       <div class="swiper-slide">
                         @include('components/homecardtest')
                     </div>
+                    <div class="swiper-slide">
+                      @include('components/homecardtest')
+                  </div>
+                  <div class="swiper-slide">
+                    @include('components/homecardtest')
+                </div>
+                <div class="swiper-slide">
+                  @include('components/homecardtest')
+              </div>
+              <div class="swiper-slide">
+                @include('components/homecardtest')
+            </div>
+            <div class="swiper-slide">
+              @include('components/homecardtest')
+          </div>
+          
                     </div>
                     <!-- If we need pagination -->
                   

@@ -10,7 +10,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $request = Http::get('https://fakestoreapi.com/products')->json();
-        return view('home', compact('request'));
+        // $request = Http::get('https://fakestoreapi.com/products')->json();
+        return view('home');
     }
 }

@@ -1380,7 +1380,7 @@ nav .links {
 }
 
 .swiper-button-prev::after, .swiper-button-next::after {
-  font-size: 14px;
-  color: #fff;
+  font-size: 14px !important;
+  color: #000;
 }
 /*# sourceMappingURL=index.css.map */
