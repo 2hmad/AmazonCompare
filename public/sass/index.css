@@ -369,14 +369,13 @@ nav .links {
   height: auto;
   aspect-ratio: 1/1;
   overflow: hidden;
-  border-radius: 4px;
-  border: 1px solid #ddd;
-  background-color: #ccc;
 }
 
 .home-card a .image img {
   width: 100%;
   height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .home-card a .price {
@@ -420,7 +419,6 @@ nav .links {
       -ms-flex-align: center;
           align-items: center;
   gap: 8px;
-  background-color: #ccc;
   padding: 8px;
 }
 
@@ -1079,6 +1077,9 @@ nav .links {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 32px;
+  background: white;
+  padding: 10px;
+  border-radius: 3px;
 }
 
 .auth-page {
@@ -1322,7 +1323,7 @@ nav .links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: 1px solid #ccc;
+  border: 1px solid #e9e9e9;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1338,11 +1339,14 @@ nav .links {
 }
 
 .homeblock > img {
-  height: 500px;
+  height: 304px;
+  width: 304px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .homeblock .images {
-  height: 500px;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1358,12 +1362,14 @@ nav .links {
   display: -ms-flexbox;
   display: flex;
   gap: 32px;
-  height: 250px;
+  height: auto;
 }
 
 .homeblock .images .row img {
-  width: 100%;
-  height: 100%;
+  width: 186px;
+  height: 116px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .homeblock a {
@@ -1371,7 +1377,8 @@ nav .links {
   padding: 16px;
 }
 
-.swiper-button-prev, .swiper-button-next {
+.swiper-button-prev,
+.swiper-button-next {
   width: 32px;
   height: 32px;
   background-color: #fff;
@@ -1379,8 +1386,20 @@ nav .links {
   border-radius: 4px;
 }
 
-.swiper-button-prev::after, .swiper-button-next::after {
+.swiper-button-prev::after,
+.swiper-button-next::after {
   font-size: 14px !important;
   color: #000;
+}
+
+.ad-728 {
+  width: 800px;
+  max-width: 100%;
+  height: 90px;
+  background-color: #ccc;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-top: 3%;
 }
 /*# sourceMappingURL=index.css.map */
