@@ -31,4 +31,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
     Route::get('/cart', function () {
         return view('cart');
     });
+    Route::get('/search', function () {
+        return view('search');
+    });
 });

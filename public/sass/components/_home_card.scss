@@ -1,6 +1,15 @@
+.swiper .home-card {
+    width: auto;
+}
 .home-card {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    gap: 8px;
+    a{
+
+        display: flex;
+        flex-direction: column;
     gap: 8px;
     @media (min-width: 0) and (max-width: 567px) {
         & > *:not(.image) {
@@ -20,12 +29,13 @@
         background-color: #ccc;
         img {
             width: 100%;
-            height: auto;
+            height: 100%;
         }
     }
     .price {
         display: flex;
         line-height: 1;
+        margin-bottom: 8px;
         .currency {
             font-size: 14px;
             line-height: 1.2;
@@ -36,6 +46,26 @@
         .complment {
             font-size: 12px;
             line-height: 1.4;
+        }
+    }
+    }
+
+    .countries {
+        display: flex;
+        flex-direction: column;
+        margin-top: auto;
+        .country {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #ccc;
+            padding: 8px;
+            .flag img {
+                width: 32px;
+            }
+            .c-go {
+                margin-left: auto;
+            }
         }
     }
 }

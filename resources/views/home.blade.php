@@ -15,12 +15,29 @@
             <div class="home-page">
                 <div class="multi-item-grid">
                     @include('components/homecard')
-                    @include('components/homecard')
-                    @include('components/homecard')
-                    @include('components/homecard')
-                    @include('components/homecard')
-                    @include('components/homecard')
+                    @include('components/homecard2')
                 </div>
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                      <!-- Slides -->
+                      <div class="swiper-slide">
+                        @include('components/homecardtest')
+                      </div>
+                      <div class="swiper-slide">
+                        @include('components/homecardtest')
+                    </div>
+                      <div class="swiper-slide">
+                        @include('components/homecardtest')
+                    </div>
+                    </div>
+                    <!-- If we need pagination -->
+                  
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                  
+                  </div>
             </div>
         </div>
     </div>
