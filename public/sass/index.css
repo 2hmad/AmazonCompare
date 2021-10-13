@@ -1237,8 +1237,8 @@ nav .links {
 .multi-item-grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 50px;
 }
 
@@ -1303,5 +1303,84 @@ nav .links {
 
 .search-page h1 {
   margin-bottom: 32px;
+}
+
+.homeblocks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 128px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.homeblock {
+  background-color: #fff;
+  padding: 12px;
+  border-radius: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #ccc;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+
+.homeblock .title {
+  font-weight: bold;
+  font-size: 24px;
+  padding: 8px;
+  padding-bottom: 0;
+}
+
+.homeblock > img {
+  height: 500px;
+}
+
+.homeblock .images {
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+
+.homeblock .images .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 32px;
+  height: 250px;
+}
+
+.homeblock .images .row img {
+  width: 100%;
+  height: 100%;
+}
+
+.homeblock a {
+  color: #05f;
+  padding: 16px;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  width: 32px;
+  height: 32px;
+  background-color: #fff;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.swiper-button-prev::after, .swiper-button-next::after {
+  font-size: 14px;
+  color: #fff;
 }
 /*# sourceMappingURL=index.css.map */

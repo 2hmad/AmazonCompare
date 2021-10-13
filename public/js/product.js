@@ -6,7 +6,6 @@ const stars = document.querySelector(".review-input .stars")
 const review_input = document.querySelector(".review-input .first-row")
 image_selector.childNodes.forEach(child => {
     child.addEventListener('click', () => {
-        console.log(image.src)
         image.src = child.src
     })
 })
@@ -24,6 +23,3 @@ for (const child of stars.children) {
         }
     })
 }
-stars.childNodes.forEach(child => {
-    
-})

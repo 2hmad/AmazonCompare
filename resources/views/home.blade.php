@@ -17,6 +17,11 @@
                     @include('components/homecard')
                     @include('components/homecard2')
                 </div>
+                <div class="homeblocks">
+                  @include('components/homeblock')
+                  @include('components/homeblock2')
+                  @include('components/homeblock')
+                </div>
                 <div class="swiper">
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">

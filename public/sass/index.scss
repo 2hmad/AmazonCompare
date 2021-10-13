@@ -40,7 +40,7 @@
 
         grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     }
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 50px;
 }
 .error-message {
@@ -90,3 +90,60 @@
           margin-bottom: 32px
       }
   }
+  .homeblocks {
+      display: flex;
+      gap: 128px;
+      justify-content: center;
+  }
+  .homeblock {
+    background-color: #fff;
+    padding: 12px;
+    border-radius: 12px;
+    display: flex;
+    border: 1px solid #ccc;
+    flex-direction: column;
+    gap: 16px;
+    .title {
+        font-weight: bold;
+    font-size: 24px;
+    padding: 8px;
+    padding-bottom: 0;
+    }
+    & > img {
+        height: 500px;
+    }
+    .images {
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        .row {
+            display: flex;
+            gap: 32px;
+            height: 250px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    a {
+        color: #05f;
+        padding: 16px;
+    }
+
+    
+}
+
+
+.swiper-button-prev, .swiper-button-next {
+    width: 32px;
+    height: 32px;
+    background-color: #fff;
+    padding: 8px;
+    border-radius: 4px;
+    &::after {
+        font-size: 14px;
+        color: #fff;                
+    }
+}

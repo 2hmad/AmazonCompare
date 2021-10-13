@@ -6,7 +6,7 @@
   direction: 'horizontal',
   loop: true,
 
-  slidesPerView: 4,
+  slidesPerView: 6,
   spaceBetween: 16,
 
   // Navigation arrows
@@ -25,7 +25,7 @@
       spaceBetween: 40,
     },
     '@1.50': {
-      slidesPerView: 4,
+      slidesPerView: 6,
       spaceBetween: 50,
     },
   }
