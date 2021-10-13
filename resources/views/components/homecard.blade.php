@@ -1,23 +1,10 @@
-@foreach ($request as $item)
-    <div class="home-card">
-        <a href="/product/{{ $item['id'] }}">
-
-            <div class="image">
-                <img src="{{ $item['image'] }}" alt="A" />
-        </div>
-        <div class="title">{{ $item['title'] }}</div>
-        <div class="stars">
-            <img src="/icons/star.svg" />
-            <img src="/icons/star.svg" />
-            <img src="/icons/star.svg" />
-            <img src="/icons/star.svg" />
-            <img src="/icons/star_half.svg" />
-        </div>
-        <div class="price">
-            <div class="currency">USD</div>
-            <div class="amount">{{ $item['price'] }}</div>
-            <div class="complment">00</div>
-        </div>
-    </a>
-</div>
-@endforeach
+<div class="home-card">
+    <div class="title">{{ __('home.hot') }}</div>
+    <div class="image">
+      <img
+        src="./img/Screenshot_2021-10-05-08-54-17-494_com.android.chrome.jpg"
+        alt="A"
+      />
+    </div>
+    <a href="/">{{ __('home.see-more') }}</a>
+  </div>
