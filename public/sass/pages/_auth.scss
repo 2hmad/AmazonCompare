@@ -24,3 +24,16 @@
         margin-bottom: 16px;
     }
 }
+.login-social {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2%;
+    .facebook {
+        max-width: 25px;
+    }
+    .google {
+        max-width: 35px;
+    }
+}

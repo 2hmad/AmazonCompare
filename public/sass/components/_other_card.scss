@@ -1,14 +1,15 @@
 .other-card {
     display: flex;
-    gap: 32px;
-    background: #333;
-    color: #fff;
+    gap: 16px;
+    background: transparent;
+    color: #111;
     padding: 16px;
     align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 1px solid rgb(224, 224, 224);
     .image {
         width: 50px;
         height: 50px;
-        background-color: #ccc;
         border-radius: 4px;
         img {
             width: 100%;
@@ -17,25 +18,49 @@
     }
 
     .price {
-        background-color: #222;
         display: flex;
         align-items: center;
         border-radius: 4px;
         overflow: hidden;
         & > * {
             line-height: 1;
-            padding:  8px;
+            padding: 8px;
         }
-        .down {
-            background-color: #444;
+        img {
+            max-width: 20px;
         }
+        .up {
+            display: flex;
+            background-color: #ccc;
+            color: green;
+            gap: 10px;
+            align-items: center;
+            width: 85px;
+            font-weight: bold;
+        }
+        margin-right: auto;
+    }
+    .down {
+        display: flex;
+        color: red;
+        gap: 10px;
+        font-weight: bold;
+        justify-content: flex-end;
+        align-items: center;
     }
 
     .logo {
-        background-image: url(/images/logos.png);
-        background-position: -10px -51px;
-        width: 97px;
-        height: 30px;
-        margin-left: auto;
+        width: 32px;
+        height: 24 px;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    button {
+        @media (max-width: 567px) {
+            flex-grow: 1;
+        }
     }
 }

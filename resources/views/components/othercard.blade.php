@@ -1,13 +1,14 @@
 <div class="other-card">
     <div class="image">
-        <img src="/" alt="">
-    </div>
-    <div class="title">Face mask 350ml</div>
-    <div class="price">
-        <div class="amount">456 EGP</div>
-        <div class="down">-2%</div>
+        <img src="/images/amazon logo.png" alt="">
     </div>
     <div class="logo">
+        <img src="/images/eg.webp" alt="EG">
     </div>
-    <button>{{ __('home.buy-now') }}</button>
+    <div class="price">
+        <div class="amount" style="color: green;font-weight:bold">456 EGP</div>
+    </div>
+    <div class="down"><img src="/icons/trending_down.svg"> 2%</div>
+
+    <button>{{ __('home.view-amazon') }}</button>
 </div>

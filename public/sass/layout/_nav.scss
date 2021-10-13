@@ -13,6 +13,7 @@ nav {
         gap: 4px;
         width: 24px;
         cursor: pointer;
+
         span {
             height: 2px;
             background-color: #fff;
@@ -20,7 +21,14 @@ nav {
     }
     .links {
         display: flex;
-        gap: 12px;
+        gap: 35px;
         align-items: center;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        flex-grow: 1;
+        white-space: nowrap;
+        @media (max-width: 567px) {
+            padding: 0 16px;
+        }
     }
 }
