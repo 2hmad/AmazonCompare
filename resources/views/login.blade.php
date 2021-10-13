@@ -1,56 +1,25 @@
 <!DOCTYPE html>
-<html @if (LaravelLocalization::getCurrentLocale() == 'ar') dir="rtl" @endif lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-
-<head>
-    @include('layout/head')
-    <title>GoAmaz - Login</title>
-</head>
-
-<body>
-    @include('layout/header')
-
-    <div class="page">
-        <div class="container">
-            <div class="auth-page">
-                <form method="POST" action="{{ route('login-account') }}">
-                    @csrf
-                    <h1>Sign in</h1>
-                    <input type="email" name="email" placeholder="Email">
-                    <input type="password" name="password" placeholder="Password">
-                    <div><input type="checkbox" name="remember" id="remember"><label for="remember"> Remember me</label>
-                    </div>
-                    <button type="submit" style="margin-top: 5%">Login</button>
-                    @error('email')
-                        <div class="error-message">{{ $message }}</div>
-                    @enderror
-                    @error('password')
-                        <div class="error-message">{{ $message }}</div>
-                    @enderror
-                    @if (Session::has('fail-email'))
-                        <div class="error-message">
-                            {{ Session::get('fail-email') }}</div>
-                    @endif
-                    @if (Session::has('fail-password'))
-                        <div class="error-message">
-                            {{ Session::get('fail-password') }}</div>
-                    @endif
-                    <div class="login-social">
-                        <a href="#" id="facebook-connect" title="Continue with facebook">
-                            <img class="facebook"
-                                src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../assets/preview/2012/png/iconmonstr-facebook-1.png&r=66&g=103&b=178">
-                        </a>
-                        <a href="#" id="google-connect" title="Continue with google">
-                            <img class="google"
-                                src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../assets/preview/2012/png/iconmonstr-google-plus-1.png&r=219&g=68&b=55">
-                        </a>
-                    </div>
-                </form>
-                <div class="new">New to GoAmaz?</div>
-                <a href="/register"><button class="second">Create GoAmaz account</button></a>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        @include('layout/head')
+        <title>Camazon - Login</title>
+    </head>
+    <body>
+        @include('layout/header')
+        <div class="page">
+            <div class="container">
+               <div class="auth-page">
+                   <form action="">
+                       <h1>Sign in</h1>
+                       <input type="text" name="username" placeholder="Username">
+                       <input type="password" name="password" placeholder="Password">
+                       <button type="submit">Login</button>
+                   </form>
+                   <div class="new">New to Camazon?</div>
+                   <button class="second"><a href="/register">Create Camazon account</a></button>
+               </div>
             </div>
         </div>
-    </div>
-    @include('layout/footer')
-</body>
-
+        @include('layout/footer')
+    </body>
 </html>

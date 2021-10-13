@@ -3,6 +3,6 @@
 return [
     'hot' => 'Hot',
     'see-more' => 'See more',
-    'view-amazon' => 'View at Amazon',
+    'buy-now' => 'Buy now',
     'today-deal' => "Today's Deal"
 ];
