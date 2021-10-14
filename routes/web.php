@@ -33,6 +33,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
     Route::get('/profile', [ProfileController::class, 'index']);
 
     Route::get('/product/{id}', [ProductController::class, 'index']);
+    Route::post('/product/{id}', [ProductController::class, 'addWatcher'])->name('addwatch');
     Route::post('/product/{id}/{email}', [ProductController::class, 'addFavorite'])->name('addfavorite');
     Route::delete('/product/{id}/{email}', [ProductController::class, 'deleteFavorite'])->name('destroy.favorite');
 

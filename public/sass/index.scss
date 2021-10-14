@@ -90,8 +90,9 @@
 }
 .homeblocks {
     display: flex;
-    gap: 128px;
+    gap: 50px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 .homeblock {
     background-color: #fff;
@@ -111,6 +112,7 @@
         height: 304px;
         width: 304px;
         object-fit: cover;
+        max-width: 100%;
     }
     .images {
         height: auto;
@@ -121,6 +123,7 @@
             display: flex;
             gap: 32px;
             height: auto;
+            flex-wrap: wrap;
             img {
                 width: 186px;
                 height: 116px;
@@ -155,4 +158,11 @@
     margin-right: auto;
     display: block;
     margin-top: 3%;
+}
+.swiper-button-prev,
+.swiper-button-next {
+    box-shadow: 1px 3px 9px 0px #d5d5d5;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50%;
 }

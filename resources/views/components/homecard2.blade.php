@@ -3,7 +3,7 @@
             <div class="image">
                 <img src="/images/2.jpg" alt="A" />
             </div>
-            <div class="title">Yousef</div>
+            <div class="title">Face mask</div>
             <div class="stars">
                 <img src="/icons/star.svg" />
                 <img src="/icons/star.svg" />

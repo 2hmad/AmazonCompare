@@ -14,6 +14,44 @@
     <div class="page">
         <div class="container">
             <div class="home-page">
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            @include('components/homecardtest2')
+                        </div>
+                        <div class="swiper-slide">
+                            @include('components/homecardtest2')
+                        </div>
+                        <div class="swiper-slide">
+                            @include('components/homecardtest2')
+                        </div>
+                        <div class="swiper-slide">
+                            @include('components/homecardtest2')
+                        </div>
+                        <div class="swiper-slide">
+                            @include('components/homecardtest2')
+                        </div>
+                        <div class="swiper-slide">
+                            @include('components/homecardtest2')
+                        </div>
+                        <div class="swiper-slide">
+                            @include('components/homecardtest2')
+                        </div>
+                        <div class="swiper-slide">
+                            @include('components/homecardtest2')
+                        </div>
+
+                    </div>
+                    <!-- If we need pagination -->
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                </div>
+
                 <div class="multi-item-grid">
                     @include('components/homecard2')
                     @include('components/homecard2')
@@ -24,6 +62,7 @@
                 <div class="homeblocks">
                     @include('components/homeblock2')
                     @include('components/homeblock')
+                    @include('components/homeblock2')
                 </div>
                 <div class="swiper">
                     <!-- Additional required wrapper -->
@@ -84,9 +123,6 @@
                     @include('components/homecard2')
                     @include('components/homecard2')
                 </div>
-                <!-- Ad -->
-                <div class="ad-728"></div>
-                <!-- End Ad -->
 
             </div>
         </div>

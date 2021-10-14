@@ -16,29 +16,28 @@
             <div class="product-page">
                 <div class="product">
                     <div class="image-selector">
-                        <img src="{{ $request['image'] }}" alt="A1">
                         <img src="/images/1.jpg" alt="A1">
                         <img src="/images/3.jpg" alt="A1">
                     </div>
                     <div class="image">
-                        <img src="{{ $request['image'] }}" alt="A1">
+                        <img src="/images/1.jpg" alt="A1">
                     </div>
                     <div class="details">
                         <div class="top-details">
 
-                            <h1 class="title">{{ $request['title'] }}
+                            <h1 class="title">Face Mask
                                 <span><img src="/images/eg.webp" /></span>
                             </h1>
                             @if ($check)
                                 <form method="POST"
-                                    action="{{ route('destroy.favorite', [$request['id'], Session::get('email') ? Session::get('email') : $_SERVER['REMOTE_ADDR']]) }}">
+                                    action="{{ route('destroy.favorite', [1, Session::get('email') ? Session::get('email') : $_SERVER['REMOTE_ADDR']]) }}">
                                     @csrf
                                     @method('delete')
                                     <button>Remove from favorite</button>
                                 </form>
                             @else
                                 <form method="POST"
-                                    action="{{ route('addfavorite', [$request['id'], Session::get('email') ? Session::get('email') : $_SERVER['REMOTE_ADDR']]) }}">
+                                    action="{{ route('addfavorite', [1, Session::get('email') ? Session::get('email') : $_SERVER['REMOTE_ADDR']]) }}">
                                     @csrf
                                     <button>Add to favorite</button>
                                 </form>
@@ -50,10 +49,10 @@
                             <img src="/icons/star.svg" />
                             <img src="/icons/star.svg" />
                             <img src="/icons/star_half.svg" />
-                            <span>{{ $request['rating']['rate'] }}</span>
+                            <span>4.5</span>
                         </div>
                         <div class="price">
-                            <div>{{ $request['price'] }}</div>
+                            <div>100</div>
                             <span>USD</span>
                         </div>
                         <div class="prices">
@@ -95,17 +94,24 @@
                         </div>
                         <div class="watch">
                             <h4>Amazon price watches</h4>
-                            <form method="POST" style="display: flex;flex-direction: column;gap: 9px;">
+                            <form method="POST" action="{{ route('addwatch', [1]) }}"
+                                style="display: flex;flex-direction: column;gap: 9px;">
+                                @csrf
                                 @include('components/currencies')
                                 <div style="display: flex;align-items: center;gap: 10px;">
-                                    <input type="checkbox" name="send-email"> <label>Send an email</label>
+                                    <input type="checkbox" name="send_email"> <label>Send an email</label>
                                 </div>
-                                <input type="email" name="send-email" placeholder="Send an email">
+                                <input type="email" name="email" placeholder="Send an email">
                                 <div style="display: flex;align-items: center;gap: 10px;">
-                                    <input type="checkbox" name="send-phone"> <label>Send an message</label>
+                                    <input type="checkbox" name="send_phone"> <label>Send an message</label>
                                 </div>
-                                <input type="phone" id="phone" name="send-phone" placeholder="Send an message">
-                                <input type="submit" name="watch-price" value="Subscribe">
+                                <input type="phone" id="phone" name="phone" placeholder="Send an message">
+                                <input type="submit" value="Subscribe">
+                                @if (\Session::has('watcher_added'))
+                                    <div class="success-message">{{ \Session::get('watcher_added') }}</div>
+                                @elseif(\Session::has('watcher_fail'))
+                                    <div class="error-message">{{ \Session::get('watcher_fail') }}</div>
+                                @endif
                             </form>
                             <div style="margin-top: 5%">
                                 <!-- AddToAny BEGIN -->
@@ -232,6 +238,18 @@
     @include('layout/footer')
     <script src="/js/product.js"></script>
 </body>
+<?php
+$start = new DateTime();
+$start->setDate($start->format('Y'), $start->format('n'), 1);
+$start->setTime(0, 0, 0);
+$start->sub(new DateInterval('P12M'));
+$interval = new DateInterval('P1M');
+$recurrences = 12;
+
+foreach (new DatePeriod($start, $interval, $recurrences, true) as $date) {
+    echo $date->format('F, Y'), "\n";
+}
+?>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"
 integrity="sha512-Wt1bJGtlnMtGP0dqNFH1xlkLBNpEodaiQ8ZN5JLA5wpc1sUlk/O5uuOMNgvzddzkpvZ9GLyYNa8w2s7rqiTk5Q=="
 crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -240,11 +258,10 @@ crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     var myChart = new Chart(ctx, {
         type: 'line',
         data: {
-            labels: ["Tokyo", "Mumbai", "Mexico City", "Shanghai", "Sao Paulo", "New York", "Karachi",
-                "Buenos Aires", "Delhi", "Moscow"
-            ],
+            labels: ['October', 'November', 'December', 'January', 'February', 'Mars', 'April'],
             datasets: [{
-                data: [500, 50, 2424, 14040, 14141, 4111, 4544, 47, 5555, 6811, 500, 50, 2424, 14040,
+                data: [
+                    500, 50, 2424, 14040, 14141, 4111, 4544, 47, 5555, 6811, 500, 50, 2424, 14040,
                     14141, 4111, 4544, 47, 5555, 6811, 500, 50, 2424, 14040, 14141, 4111, 4544, 47,
                     5555, 6811, 500, 50, 2424, 14040, 14141, 4111, 4544, 47, 5555, 6811
                 ],
@@ -268,6 +285,8 @@ crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
     const phoneInputField = document.querySelector("#phone");
     const phoneInput = window.intlTelInput(phoneInputField, {
+        hiddenInput: "full-phone",
+        nationalMode: true,
         utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
     });
 </script>

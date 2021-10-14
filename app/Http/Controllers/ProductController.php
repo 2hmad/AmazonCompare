@@ -12,13 +12,13 @@ class ProductController extends Controller
 {
     public function index($id)
     {
-        $request = Http::get('https://fakestoreapi.com/products/' . $id)->json();
+        // $request = Http::get('https://fakestoreapi.com/products/' . $id)->json();
         if (Session::has('email')) {
             $check = DB::table('favorite')->where('email', '=', Session::get('email'))->where('product_id', '=', $id)->first();
         } else {
             $check = DB::table('favorite')->where('email', '=', $_SERVER['REMOTE_ADDR'])->where('product_id', '=', $id)->first();
         }
-        return view('product', compact('request', 'check'));
+        return view('product', compact('check'));
     }
     public function addFavorite($id, $email)
     {
@@ -29,5 +29,20 @@ class ProductController extends Controller
     {
         DB::table('favorite')->where('product_id', $id)->where('email', $email)->delete();
         return redirect()->back();
+    }
+    public function addWatcher(Request $request, $id)
+    {
+        if ($request->has('send_email') && !$request->has('send_phone')) {
+            DB::insert('insert into watchers (product, contact, currency) values (?, ?, ?)', [$id, $request->input('email'), $request->input('currency')]);
+            return redirect()->back()->with('watcher_added', 'Done');
+        } elseif (!$request->has('send_email') && $request->has('send_phone')) {
+            DB::insert('insert into watchers (product, phone, currency) values (?, ?, ?)', [$id, $request->input('full-phone'), $request->input('currency')]);
+            return redirect()->back()->with('watcher_added', 'Done');
+        } elseif ($request->has('send_email') && $request->has('send_phone')) {
+            DB::insert('insert into watchers (product, contact, phone, currency) values (?, ?, ?, ?)', [$id, $request->input('email'), $request->input('full-phone'), $request->input('currency')]);
+            return redirect()->back()->with('watcher_added', 'Done');
+        } else {
+            return redirect()->back()->with('watcher_fail', 'Failed');
+        }
     }
 }

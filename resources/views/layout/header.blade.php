@@ -25,7 +25,7 @@
         @if (Session::has('email'))
             <a href="/profile" class="profile">
                 <div class="profile-image">
-                    <img src="/images/2.jpg" alt="Yousef">
+                    <img src="/images/2.jpg" alt="Face mask">
                 </div>
             </a>
             <a href="/logout" style="margin-right: 1%">
