@@ -15,6 +15,6 @@ class FavoriteController extends Controller
         } else {
             $products = DB::table('favorite')->where('email', '=', $_SERVER['REMOTE_ADDR'])->get();
         }
-        return view('cart', compact('products'));
+        return view('favorite', compact('products'));
     }
 }
