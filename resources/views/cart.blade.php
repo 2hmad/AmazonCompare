@@ -32,43 +32,6 @@
                         </div>
                     </div>
 
-                    <div class="cart-item">
-                        <div class="cart-image">
-                            <img src="/images/2.jpg" alt="Alt">
-                        </div>
-                        <div class="cart-item-info">
-                            <div class="name">Face mask 350ml</div>
-                            <div class="price">350 USD</div>
-                            <div class="stars">
-                                <img src="/icons/star.svg" />
-                                <img src="/icons/star.svg" />
-                                <img src="/icons/star.svg" />
-                                <img src="/icons/star.svg" />
-                                <img src="/icons/star_half.svg" />
-                            </div>
-                            <button>Buy</button>
-                        </div>
-                    </div>
-
-                    <div class="cart-item">
-                        <div class="cart-image">
-                            <img src="/images/2.jpg" alt="Alt">
-                        </div>
-                        <div class="cart-item-info">
-                            <div class="name">Face mask 350ml</div>
-                            <div class="price">350 USD</div>
-                            <div class="stars">
-                                <img src="/icons/star.svg" />
-                                <img src="/icons/star.svg" />
-                                <img src="/icons/star.svg" />
-                                <img src="/icons/star.svg" />
-                                <img src="/icons/star_half.svg" />
-                            </div>
-                            <button>Buy</button>
-                        </div>
-                    </div>
-
-
                 </div>
             </div>
         </div>

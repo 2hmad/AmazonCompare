@@ -4,6 +4,8 @@
 <head>
     @include('layout/head')
     <title>GoAmaz - Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
 </head>
 
 <body>
@@ -27,8 +29,20 @@
                             <h1 class="title">{{ $request['title'] }}
                                 <span><img src="/images/eg.webp" /></span>
                             </h1>
-
-                            <button>Add to favourite</button>
+                            @if ($check)
+                                <form method="POST"
+                                    action="{{ route('destroy.favorite', [$request['id'], Session::get('email') ? Session::get('email') : $_SERVER['REMOTE_ADDR']]) }}">
+                                    @csrf
+                                    @method('delete')
+                                    <button>Remove from favorite</button>
+                                </form>
+                            @else
+                                <form method="POST"
+                                    action="{{ route('addfavorite', [$request['id'], Session::get('email') ? Session::get('email') : $_SERVER['REMOTE_ADDR']]) }}">
+                                    @csrf
+                                    <button>Add to favorite</button>
+                                </form>
+                            @endif
                         </div>
                         <div class="stars">
                             <img src="/icons/star.svg" />
@@ -90,7 +104,7 @@
                                 <div style="display: flex;align-items: center;gap: 10px;">
                                     <input type="checkbox" name="send-phone"> <label>Send an message</label>
                                 </div>
-                                <input type="phone" name="send-phone" placeholder="Send an message">
+                                <input type="phone" id="phone" name="send-phone" placeholder="Send an message">
                                 <input type="submit" name="watch-price" value="Subscribe">
                             </form>
                             <div style="margin-top: 5%">
@@ -116,8 +130,8 @@
                     @include('components/othercard')
                     @include('components/othercard')
                 </div>
-                <div class="chart-container" style="position: relative; height:40vh; width:80vw">
-                    <canvas id="myChart" width="400" height="400"></canvas>
+                <div class="chart-container" style="position: relative; height:70vh; width:100%">
+                    <canvas id="myChart" width="500" height="500"></canvas>
                 </div>
                 <div class="reviews-container">
                     <div class="stats">
@@ -230,7 +244,6 @@ crossorigin="anonymous" referrerpolicy="no-referrer"></script>
                 "Buenos Aires", "Delhi", "Moscow"
             ],
             datasets: [{
-                label: 'Series 1',
                 data: [500, 50, 2424, 14040, 14141, 4111, 4544, 47, 5555, 6811, 500, 50, 2424, 14040,
                     14141, 4111, 4544, 47, 5555, 6811, 500, 50, 2424, 14040, 14141, 4111, 4544, 47,
                     5555, 6811, 500, 50, 2424, 14040, 14141, 4111, 4544, 47, 5555, 6811
@@ -244,7 +257,18 @@ crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         options: {
             responsive: true,
             maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: false
+                }
+            }
         }
+    });
+</script>
+<script>
+    const phoneInputField = document.querySelector("#phone");
+    const phoneInput = window.intlTelInput(phoneInputField, {
+        utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
     });
 </script>
 

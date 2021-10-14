@@ -36,7 +36,7 @@
                 <a href="/login">Sign in</a>
             </div>
         @endif
-        <a href="/cart" class="cart"><img src="/icons/cart.svg" /></a>
+        <a href="/favorite" class="cart"><img src="/icons/favorite.svg" style="width: 25px;" /></a>
     </div>
     <div class="search-responsive-con">
         <div class="container">

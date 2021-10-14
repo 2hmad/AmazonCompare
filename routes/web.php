@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FavoriteController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductController;
@@ -21,16 +22,21 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']], function () {
     Route::get('/', [HomeController::class, 'index']);
+
     Route::get('/login', [LoginController::class, 'index']);
     Route::post('/login', [LoginController::class, 'check'])->name('login-account');
+
     Route::get('/register', [RegisterController::class, 'index']);
     Route::post('/register', [RegisterController::class, 'register'])->name('register-acc');
+
     Route::get('/logout', [LoginController::class, 'logout']);
     Route::get('/profile', [ProfileController::class, 'index']);
+
     Route::get('/product/{id}', [ProductController::class, 'index']);
-    Route::get('/cart', function () {
-        return view('cart');
-    });
+    Route::post('/product/{id}/{email}', [ProductController::class, 'addFavorite'])->name('addfavorite');
+    Route::delete('/product/{id}/{email}', [ProductController::class, 'deleteFavorite'])->name('destroy.favorite');
+
+    Route::get('/favorite', [FavoriteController::class, 'index']);
     Route::get('/search', function () {
         return view('search');
     });
