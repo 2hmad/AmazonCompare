@@ -10,16 +10,6 @@ use App\Http\Controllers\SocialController;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
 Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']], function () {
     Route::get('/', [HomeController::class, 'index']);
@@ -34,6 +24,8 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
 
     Route::get('/logout', [LoginController::class, 'logout']);
     Route::get('/profile', [ProfileController::class, 'index']);
+    Route::post('/profile', [ProfileController::class, 'updateInfo'])->name('update_info');
+    Route::post('/profile', [ProfileController::class, 'updatePassword'])->name('update_password');
 
     Route::get('/product/{id}', [ProductController::class, 'index']);
     Route::post('/product/{id}', [ProductController::class, 'addWatcher'])->name('addwatch');
