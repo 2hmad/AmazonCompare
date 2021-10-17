@@ -35,11 +35,11 @@
                             {{ Session::get('fail-password') }}</div>
                     @endif
                     <div class="login-social">
-                        <a href="#" id="facebook-connect" title="Continue with facebook">
+                        <a href="{{ url('redirect/facebook') }}" id="facebook-connect" title="Continue with facebook">
                             <img class="facebook"
                                 src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../assets/preview/2012/png/iconmonstr-facebook-1.png&r=66&g=103&b=178">
                         </a>
-                        <a href="#" id="google-connect" title="Continue with google">
+                        <a href="{{ url('redirect/google') }}" id="google-connect" title="Continue with google">
                             <img class="google"
                                 src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../assets/preview/2012/png/iconmonstr-google-plus-1.png&r=219&g=68&b=55">
                         </a>

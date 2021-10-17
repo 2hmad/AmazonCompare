@@ -23,7 +23,6 @@
                 <img src="/images/eg.webp" alt="EG" />
             </div>
             <div class="info">
-                <div>Amazon Egypt</div>
                 <div>1500 EGP</div>
             </div>
             <a href="/" class="c-go">
@@ -35,7 +34,6 @@
                 <img src="/images/eg.webp" alt="EG" />
             </div>
             <div class="info">
-                <div>Amazon Egypt</div>
                 <div>1500 EGP</div>
             </div>
             <a href="/" class="c-go">
@@ -47,7 +45,6 @@
                 <img src="/images/eg.webp" alt="EG" />
             </div>
             <div class="info">
-                <div>Amazon Egypt</div>
                 <div>1500 EGP</div>
             </div>
             <a href="/" class="c-go">

@@ -6,6 +6,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\SocialController;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
@@ -25,6 +26,8 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
 
     Route::get('/login', [LoginController::class, 'index']);
     Route::post('/login', [LoginController::class, 'check'])->name('login-account');
+    Route::get('/redirect/{service}', [SocialController::class, 'redirect']);
+    Route::get('/callback/{service}', [SocialController::class, 'callback']);
 
     Route::get('/register', [RegisterController::class, 'index']);
     Route::post('/register', [RegisterController::class, 'register'])->name('register-acc');
