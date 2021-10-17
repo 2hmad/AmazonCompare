@@ -28,8 +28,8 @@ class RegisterController extends Controller
             'email.unique:users' => 'email already exist',
             'phone.required' => 'phone required',
             'password.required' => 'password required',
-            'password.min:8' => 'password is too short',
-            'password.same:confirm_password' => 'password and confirm not match',
+            'password.min' => 'password is too short',
+            'password.same' => 'password and confirm not match',
             'agree.required' => 'agree check required'
         ]);
         if ($validated) {

@@ -13,7 +13,11 @@ class Users extends Model
         "email",
         "password",
         "phone",
-        "last_activity"
+        "last_activity",
+        "fb_id"
     ];
-    protected $hidden = [];
+    protected $hidden = [
+        "password",
+        "remember_token"
+    ];
 }

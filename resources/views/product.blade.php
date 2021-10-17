@@ -136,9 +136,7 @@
                     @include('components/othercard')
                     @include('components/othercard')
                 </div>
-                <div class="chart-container" style="position: relative; height:70vh; width:100%">
-                    <canvas id="myChart" width="500" height="500"></canvas>
-                </div>
+                <div id="chartdiv"></div>
                 <div class="reviews-container">
                     <div class="stats">
                         <h2>Customer review</h2>
@@ -238,51 +236,38 @@
     @include('layout/footer')
     <script src="/js/product.js"></script>
 </body>
-<?php
-$start = new DateTime();
-$start->setDate($start->format('Y'), $start->format('n'), 1);
-$start->setTime(0, 0, 0);
-$start->sub(new DateInterval('P12M'));
-$interval = new DateInterval('P1M');
-$recurrences = 12;
-
-foreach (new DatePeriod($start, $interval, $recurrences, true) as $date) {
-    echo $date->format('F, Y'), "\n";
-}
-?>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"
-integrity="sha512-Wt1bJGtlnMtGP0dqNFH1xlkLBNpEodaiQ8ZN5JLA5wpc1sUlk/O5uuOMNgvzddzkpvZ9GLyYNa8w2s7rqiTk5Q=="
-crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
 <script>
-    var ctx = document.getElementById("myChart").getContext('2d');
-    var myChart = new Chart(ctx, {
-        type: 'line',
-        data: {
-            labels: ['October', 'November', 'December', 'January', 'February', 'Mars', 'April'],
-            datasets: [{
-                data: [
-                    500, 50, 2424, 14040, 14141, 4111, 4544, 47, 5555, 6811, 500, 50, 2424, 14040,
-                    14141, 4111, 4544, 47, 5555, 6811, 500, 50, 2424, 14040, 14141, 4111, 4544, 47,
-                    5555, 6811, 500, 50, 2424, 14040, 14141, 4111, 4544, 47, 5555, 6811
-                ],
-                fill: false,
-                borderColor: '#2196f3',
-                backgroundColor: '#2196f3',
-                borderWidth: 1
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: {
-                legend: {
-                    display: false
-                }
-            }
-        }
+    am4core.ready(function() {
+    am4core.useTheme(am4themes_animated);
+    var chart = am4core.create("chartdiv", am4charts.XYChart);
+    var data = [];
+    var value = 50;
+    for(var i = 0; i < 300; i++){
+      var date = new Date();
+      date.setHours(0,0,0,0);
+      date.setDate(i);
+      value -= Math.round((Math.random() < 0.5 ? 1 : -1) * Math.random() * 10);
+      data.push({date:date, value: value});
+    }
+    chart.data = data;
+    var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
+    dateAxis.renderer.minGridDistance = 60;
+    var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+    var series = chart.series.push(new am4charts.LineSeries());
+    series.dataFields.valueY = "value";
+    series.dataFields.dateX = "date";
+    series.tooltipText = "{value}"
+    series.tooltip.pointerOrientation = "vertical";
+    chart.cursor = new am4charts.XYCursor();
+    chart.cursor.snapToSeries = series;
+    chart.cursor.xAxis = dateAxis;
+    chart.scrollbarX = new am4core.Scrollbar();
     });
-</script>
-<script>
+    </script>
+    <script>
     const phoneInputField = document.querySelector("#phone");
     const phoneInput = window.intlTelInput(phoneInputField, {
         hiddenInput: "full-phone",
