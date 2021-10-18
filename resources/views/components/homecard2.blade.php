@@ -25,31 +25,13 @@
                 <div class="info">
                     <div>1500 EGP</div>
                 </div>
+                    @if(LaravelLocalization::getCurrentLocale() == 'en') 
                 <a href="/" class="c-go">
-                    <img src="/icons/arrow.svg" alt="Go" />
+                        <img src="/icons/arrow.svg" alt="Go" />  
                 </a>
-            </div>
-            <div class="country">
-                <div class="flag">
-                    <img src="/images/eg.webp" alt="EG" />
-                </div>
-                <div class="info">
-                    <div>1500 EGP</div>
-                </div>
-                <a href="/" class="c-go">
-                    <img src="/icons/arrow.svg" alt="Go" />
-                </a>
-            </div>
-            <div class="country">
-                <div class="flag">
-                    <img src="/images/eg.webp" alt="EG" />
-                </div>
-                <div class="info">
-                    <div>1500 EGP</div>
-                </div>
-                <a href="/" class="c-go">
-                    <img src="/icons/arrow.svg" alt="Go" />
-                </a>
+                    @else
+                        <img src="/icons/arrow-left.svg" alt="Go" />
+                    @endif
             </div>
         </div>
     </div>

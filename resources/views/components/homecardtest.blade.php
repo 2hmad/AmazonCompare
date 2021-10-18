@@ -26,29 +26,11 @@
                 <div>1500 EGP</div>
             </div>
             <a href="/" class="c-go">
-                <img src="/icons/arrow.svg" alt="Go" />
-            </a>
-        </div>
-        <div class="country">
-            <div class="flag">
-                <img src="/images/eg.webp" alt="EG" />
-            </div>
-            <div class="info">
-                <div>1500 EGP</div>
-            </div>
-            <a href="/" class="c-go">
-                <img src="/icons/arrow.svg" alt="Go" />
-            </a>
-        </div>
-        <div class="country">
-            <div class="flag">
-                <img src="/images/eg.webp" alt="EG" />
-            </div>
-            <div class="info">
-                <div>1500 EGP</div>
-            </div>
-            <a href="/" class="c-go">
-                <img src="/icons/arrow.svg" alt="Go" />
+                @if(LaravelLocalization::getCurrentLocale() == 'en')
+                    <img src="/icons/arrow.svg" alt="Go" />                        
+                @else
+                    <img src="/icons/arrow-left.svg" alt="Go" />
+                @endif
             </a>
         </div>
     </div>

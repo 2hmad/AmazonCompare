@@ -25,7 +25,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
     Route::get('/logout', [LoginController::class, 'logout']);
     Route::get('/profile', [ProfileController::class, 'index']);
     Route::post('/profile', [ProfileController::class, 'updateInfo'])->name('update_info');
-    Route::post('/profile', [ProfileController::class, 'updatePassword'])->name('update_password');
+    Route::post('/profile/update-password', [ProfileController::class, 'updatePassword'])->name('update_password');
 
     Route::get('/product/{id}', [ProductController::class, 'index']);
     Route::post('/product/{id}', [ProductController::class, 'addWatcher'])->name('addwatch');

@@ -28,11 +28,18 @@
                 </form>
                 <hr style="width: 100%;margin-top: 5%;margin-bottom: 3%;border: 1px solid #e1e1e1;" />
                 <div style="width: 100%">
-                    <form method="POST" action="{{ url('update-password') }}">
+                    <form method="POST" action="{{ route('update_password') }}">
+                        @csrf
                         <input type="password" name="password" placeholder="New Password">
-                        <input type="password" name="password" placeholder="Confirm new password">
+                        <input type="password" name="confirm_password" placeholder="Confirm new password">
                         <button type="submit">Change password</button>
                     </form>
+                    @error('password')
+                    <div class="error-message">{{ $message }}</div>
+                    @enderror
+                    @if(Session::has('success'))
+                        <div class="success-message">Changed Successfully</div>
+                    @endif
                 </div>
             </div>
         </div>
