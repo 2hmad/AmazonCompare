@@ -14,7 +14,7 @@
         <div class="price">
             <div class="currency">USD</div>
             <div class="amount">350</div>
-            <div class="complment">00</div>
+            {{-- <div class="complment">00</div> --}}
         </div>
     </a>
     <div class="countries">
@@ -25,13 +25,15 @@
             <div class="info">
                 <div>1500 EGP</div>
             </div>
-            <a href="/" class="c-go">
-                @if(LaravelLocalization::getCurrentLocale() == 'en')
-                    <img src="/icons/arrow.svg" alt="Go" />                        
-                @else
+            @if (LaravelLocalization::getCurrentLocale() == 'en')
+                <a href="/" class="c-go">
+                    <img src="/icons/arrow.svg" alt="Go" />
+                </a>
+            @else
+                <a href="/" class="c-go" style="margin-right: auto">
                     <img src="/icons/arrow-left.svg" alt="Go" />
-                @endif
-            </a>
+                </a>
+            @endif
         </div>
     </div>
 </div>
