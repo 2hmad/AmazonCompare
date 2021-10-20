@@ -169,4 +169,11 @@
 #chartdiv {
     width: 100%;
     height: 500px;
+    direction: ltr;
+    g[aria-labelledby="id-66-title"] {
+        display: none;
+    }
+    g[role="scrollbar"] {
+        display: none;
+    }
 }

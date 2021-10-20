@@ -15,7 +15,7 @@
         <div class="price">
             <div class="currency">USD</div>
             <div class="amount">350</div>
-            <div class="complment">00</div>
+            {{-- <div class="complment">00</div> --}}
         </div>
     </a>
 </div>

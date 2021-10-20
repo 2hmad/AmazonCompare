@@ -14,7 +14,7 @@
             <div class="auth-page">
                 <form method="POST" action="{{ route('login-account') }}">
                     @csrf
-                    <h1>Sign in</h1>
+                    <h1>{{ __('home.signin') }}</h1>
                     <input type="email" name="email" placeholder="Email">
                     <input type="password" name="password" placeholder="Password">
                     <div><input type="checkbox" name="remember" id="remember"><label for="remember"> Remember me</label>
@@ -35,11 +35,11 @@
                             {{ Session::get('fail-password') }}</div>
                     @endif
                     <div class="login-social">
-                        <a href="{{url('redirect/facebook')}}" id="facebook-connect" title="Continue with Facebook">
+                        <a href="{{ url('redirect/facebook') }}" id="facebook-connect" title="Continue with Facebook">
                             <img class="facebook"
                                 src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../assets/preview/2012/png/iconmonstr-facebook-1.png&r=66&g=103&b=178">
                         </a>
-                        <a href="{{url('redirect/google')}}" id="google-connect" title="Continue with Google">
+                        <a href="{{ url('redirect/google') }}" id="google-connect" title="Continue with Google">
                             <img class="google"
                                 src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../assets/preview/2012/png/iconmonstr-google-plus-1.png&r=219&g=68&b=55">
                         </a>
@@ -52,4 +52,5 @@
     </div>
     @include('layout/footer')
 </body>
+
 </html>
