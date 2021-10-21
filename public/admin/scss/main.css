@@ -1,0 +1,59 @@
+.login-container {
+  font-family: "Cairo", sans-serif;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.login-container .card {
+  background-color: #f9f9f9;
+  max-width: 350px;
+  margin: 0 auto;
+  min-height: 35vh;
+  -webkit-box-shadow: 4px 1px 9px 0px #e7e7e7;
+          box-shadow: 4px 1px 9px 0px #e7e7e7;
+  padding: 20px;
+  margin-top: 12%;
+}
+
+.login-container .card form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+}
+
+.login-container .card form input[type="email"],
+.login-container .card form input[type="password"] {
+  text-align: right !important;
+  padding: 8px;
+  width: 370px;
+  max-width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  outline: none;
+}
+
+.login-container .card form input[type="submit"] {
+  padding: 10px;
+  width: 155px;
+  background: #ffa530;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-weight: bold;
+  margin: 0 auto;
+}
+
+.login-container .card h1 {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+/*# sourceMappingURL=main.css.map */

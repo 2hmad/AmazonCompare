@@ -40,6 +40,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
     });
 });
 Route::group(['prefix' => 'admin'], function () {
-    Route::get('/', [AdminLogin::class, 'index']);
-    Route::get('/dashboard', [AdminDashboard::class, 'index']);
+    Route::get('login', [AdminLogin::class, 'index']);
+    Route::post('login', [AdminLogin::class, 'login']);
+    Route::get('dashboard', [AdminDashboard::class, 'index']);
 });
