@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\admin\AdminDashboard;
+use App\Http\Controllers\admin\AdminLogin;
 use App\Http\Controllers\FavoriteController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
@@ -36,4 +38,8 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
     Route::get('/search', function () {
         return view('search');
     });
+});
+Route::group(['prefix' => 'admin'], function () {
+    Route::get('/', [AdminLogin::class, 'index']);
+    Route::get('/dashboard', [AdminDashboard::class, 'index']);
 });
