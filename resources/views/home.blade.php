@@ -7,7 +7,6 @@
 </head>
 
 <body style="background:#f6f6f8">
-
     @include('layout/header')
     @include('layout/nav')
     <div class="ad-728"></div>

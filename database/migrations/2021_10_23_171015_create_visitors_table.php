@@ -17,7 +17,7 @@ class CreateVisitorsTable extends Migration
             $table->id();
             $table->text('page');
             $table->text('ip');
-            $table->timestamp('date');
+            $table->date('date');
         });
     }
 

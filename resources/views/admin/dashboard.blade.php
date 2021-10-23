@@ -65,7 +65,7 @@
                             <!-- small box -->
                             <div class="small-box bg-success">
                                 <div class="inner">
-                                    <h3>53<sup style="font-size: 20px">%</sup></h3>
+                                    <h3>{{ DB::table('visitors')->where('page', '<>', 'website')->count() }}</h3>
                                     <p>النقر علي المنتجات</p>
                                 </div>
                                 <div class="icon">
@@ -78,8 +78,8 @@
                             <!-- small box -->
                             <div class="small-box bg-danger">
                                 <div class="inner">
-                                    <h3>{{ DB::table('visitors')->get('count') }}</h3>
-                                    <p>الزوار</p>
+                                    <h3>{{ DB::table('visitors')->where('page', '=', 'website')->count() }}</h3>
+                                    <p>الزوار علي موقعك</p>
                                 </div>
                                 <div class="icon">
                                     <i class="ion ion-pie-graph"></i>
