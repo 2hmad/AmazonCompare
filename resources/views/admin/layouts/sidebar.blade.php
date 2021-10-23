@@ -9,7 +9,7 @@
                         <img src="img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
                     </div>
                     <div class="info">
-                        <a href="#" class="d-block">Alexander Pierce</a>
+                        <a href="#" class="d-block">{{ $data->name }}</a>
                     </div>
                 </div>
 
@@ -18,27 +18,26 @@
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                         data-accordion="false">
                         <li class="nav-item">
-                            <a href="pages/calendar.html" class="nav-link">
-                                <i class="nav-icon far fa-calendar-alt"></i>
+                            <a href="dashboard" class="nav-link">
+                                <i class="nav-icon fas fa-home"></i>
                                 <p>
-                                    Calendar
-                                    <span class="badge badge-info right">2</span>
+                                    الصفحة الرئيسية
                                 </p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/gallery.html" class="nav-link">
-                                <i class="nav-icon far fa-image"></i>
+                            <a href="users" class="nav-link">
+                                <i class="nav-icon fas fa-user"></i>
                                 <p>
-                                    Gallery
+                                    الاعضاء
                                 </p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/kanban.html" class="nav-link">
-                                <i class="nav-icon fas fa-columns"></i>
+                            <a href="{{route('logout')}}" class="nav-link">
+                                <i class="nav-icon fas fa-sign-out-alt"></i>
                                 <p>
-                                    Kanban Board
+                                    تسجيل الخروج
                                 </p>
                             </a>
                         </li>

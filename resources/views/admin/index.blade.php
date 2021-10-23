@@ -13,8 +13,8 @@
 <body>
     <div class="login-container">
         <div class="card">
-            <h1>صفحة الدخول الرئيسية</h1>
-            <form method="POST">
+            <h1>دخول لوحة التحكم</h1>
+            <form method="POST" action="{{ route('checkAdmin') }}">
                 @csrf
                 <input type="email" name="email" placeholder="البريد الالكتروني">
                 <input type="password" name="password" placeholder="كلمة المرور">
@@ -23,6 +23,9 @@
                         الدخول</label>
                 </div>
                 <input type="submit" name="login" value="الدخول">
+                @if (Session::has('error'))
+                    <div class="error-message">{{ Session::get('error') }}</div>
+                @endif
             </form>
         </div>
     </div>
