@@ -136,26 +136,29 @@
                     </div>
                 </div>
                 <h4 style="text-align: center;font-weight:bold;text-decoration:underline">اخر الاعضاء</h4>
-                <table class="table table-bordered table-hover table-striped">
-                    <thead>
-                        <tr>
-                            <th>الاسم</th>
-                            <th>البريد الالكتروني</th>
-                            <th>رقم الهاتف</th>
-                            <th>الدولة</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($users as $user)
+                <div class="table-responsive">
+
+                    <table class="table table-bordered table-hover table-striped">
+                        <thead>
                             <tr>
-                                <td>{{ $user->name }}</td>
-                                <td>{{ $user->email }}</td>
-                                <td>{{ $user->phone }}</td>
-                                <td>{{ $user->country }}</td>
+                                <th>الاسم</th>
+                                <th>البريد الالكتروني</th>
+                                <th>رقم الهاتف</th>
+                                <th>الدولة</th>
                             </tr>
-                        @endforeach
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                            @foreach ($users as $user)
+                                <tr>
+                                    <td>{{ $user->name }}</td>
+                                    <td>{{ $user->email }}</td>
+                                    <td>{{ $user->phone }}</td>
+                                    <td>{{ $user->country }}</td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
             </section>
         </div>
     </div>
