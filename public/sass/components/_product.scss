@@ -159,6 +159,7 @@
         border-radius: 8px;
         border: 1px solid #ccc;
         align-self: flex-start;
+        max-width: 100%;
         h2 {
             margin-bottom: 8px;
         }
@@ -263,6 +264,9 @@
             height: auto;
             width: 100%;
             outline: none;
+        }
+        input[type="phone"] {
+            padding: 6px 13px 6px 52px;
         }
         input[type="submit"] {
             padding: 10px;

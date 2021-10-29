@@ -1,5 +1,5 @@
-<select id="currency" name="currency">
-    <option>Select currency</option>
+<select id="currency" name="currency" required>
+    <option value="" hidden>{{ __('product.select-currency') }}</option>
     <option value="AFN">AFN - Afghan Afghani</option>
     <option value="ALL">ALL - Albanian Lek</option>
     <option value="DZD">DZD - Algerian Dinar</option>

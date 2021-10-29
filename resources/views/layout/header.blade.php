@@ -1,4 +1,4 @@
-<header>
+<header style="direction: ltr;">
     <div class="container">
         <div class="logo"><a href="/">GoAmaz</a></div>
         @if (request()->route()->uri == 'ar/login' || (request()->route()->uri == 'en/login' || request()->route()->uri == 'ar/register') || request()->route()->uri == 'en/register')
@@ -12,8 +12,8 @@
             </div>
         @endif
         <div class="lang">
-            <div class="current-lang">EN</div>
-            <div class="lang-dropdown">
+            <div class="current-lang">{{ LaravelLocalization::getCurrentLocaleName() }}</div>
+            <div class="lang-dropdown" style="z-index: 999;">
                 <a href="{{ LaravelLocalization::getLocalizedURL('en') }}">
                     <div class="lang-choice @if (LaravelLocalization::getCurrentLocale() == 'en') active @endif">EN</div>
                 </a>
@@ -25,18 +25,19 @@
         @if (Session::has('email'))
             <a href="/profile" class="profile">
                 <div class="profile-image">
-                    <img src="/images/2.jpg" alt="Yousef">
+                    <img src="/images/2.jpg">
                 </div>
             </a>
-            <a href="/logout" style="margin-right: 1%">
-                <img src="/icons/logout_white.svg">
+            <a href="/favorite" class="cart"><img src="/icons/favorite.svg" style="width: 25px;" /></a>
+            <a href="/logout" style="margin-left: 1%">
+                {{ __('home.signout') }}
             </a>
         @else
             <div class="links">
-                <a href="/login">Sign in</a>
+                <a href="/login">{{ __('home.signin') }}</a>
             </div>
+            <a href="/favorite" class="cart"><img src="/icons/favorite.svg" style="width: 25px;" /></a>
         @endif
-        <a href="/cart" class="cart"><img src="/icons/cart.svg" /></a>
     </div>
     <div class="search-responsive-con">
         <div class="container">
