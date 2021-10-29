@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSubscribeTable extends Migration
+class CreateAdsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,15 @@ class CreateSubscribeTable extends Migration
      */
     public function up()
     {
-        Schema::create('watchers', function (Blueprint $table) {
+        Schema::create('ads', function (Blueprint $table) {
             $table->id();
-            $table->string('product');
-            $table->string('contact');
-            $table->string('phone');
-            $table->string('currency');
+            $table->text('url');
+            $table->text('image');
+            $table->text('title');
+            $table->text('price');
+            $table->text('currency');
+            $table->text('merchant');
+            $table->text('logo');
         });
     }
 
@@ -29,6 +32,6 @@ class CreateSubscribeTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('subscribe');
+        Schema::dropIfExists('ads');
     }
 }

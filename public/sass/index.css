@@ -1243,6 +1243,10 @@ nav .links {
      object-fit: cover;
 }
 
+body {
+  font-family: "Tajawal", "Nunito", sans-serif;
+}
+
 .single-item-grid {
   display: -webkit-box;
   display: -ms-flexbox;

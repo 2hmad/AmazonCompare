@@ -45,4 +45,8 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/logout', [AdminLogin::class, 'logout'])->name('logout');
     Route::get('/dashboard', [AdminDashboard::class, 'index']);
     Route::get('/users', [AdminDashboard::class, 'users']);
+    Route::get('/statistics', [AdminDashboard::class, 'statistics']);
+    Route::get('/ads', [AdminDashboard::class, 'ads']);
+    Route::post('/ads', [AdminDashboard::class, 'ads'])->name('add-ad');
+    Route::delete('/ads/{id}', [AdminDashboard::class, 'ads'])->name('delete-ad');
 });

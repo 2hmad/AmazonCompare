@@ -34,7 +34,23 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{route('logout')}}" class="nav-link">
+                            <a href="statistics" class="nav-link">
+                                <i class="nav-icon fas fa-chart-bar"></i>
+                                <p>
+                                    الاحصائيات
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="ads" class="nav-link">
+                                <i class="nav-icon fas fa-ad"></i>
+                                <p>
+                                    الاعلانات
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('logout') }}" class="nav-link">
                                 <i class="nav-icon fas fa-sign-out-alt"></i>
                                 <p>
                                     تسجيل الخروج

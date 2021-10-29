@@ -17,13 +17,11 @@ class CreateUsersTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
-            $table->string('phone')->unique();
-            $table->string('country');
-            $table->string('city');
+            $table->string('phone')->unique()->nullable();
+            $table->string('country')->nullable();
+            $table->string('city')->nullable();
             $table->string('password');
-            $table->string('pic');
-            $table->string('facebook_id');
-            $table->rememberToken();
+            $table->string('pic')->nullable();
         });
     }
 
